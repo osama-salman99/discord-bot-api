@@ -5,8 +5,8 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 import osmosis.commons.message.ProcessingMessage;
-import osmosis.filters.message.result.FilterResult;
 import osmosis.filters.message.helpers.MessageHelper;
+import osmosis.filters.message.result.FilterResult;
 
 import java.util.stream.Stream;
 
