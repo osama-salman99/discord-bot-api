@@ -1,4 +1,4 @@
-package osmosis.message.helpers;
+package osmosis.filters.message.helpers;
 
 import org.javacord.api.DiscordApi;
 import org.javacord.api.entity.channel.TextChannel;

@@ -3,7 +3,7 @@ package osmosis.filters.message;
 import org.junit.jupiter.api.Test;
 import osmosis.commons.message.ProcessingMessage;
 import osmosis.filters.message.result.FilterResult;
-import osmosis.message.helpers.MessageHelper;
+import osmosis.filters.message.helpers.MessageHelper;
 
 import static org.junit.jupiter.api.Assertions.*;
 

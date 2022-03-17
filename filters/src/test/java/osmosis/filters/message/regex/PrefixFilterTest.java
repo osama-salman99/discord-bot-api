@@ -6,14 +6,14 @@ import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 import osmosis.commons.message.ProcessingMessage;
 import osmosis.filters.message.result.FilterResult;
-import osmosis.message.helpers.MessageHelper;
+import osmosis.filters.message.helpers.MessageHelper;
 
 import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class PrefixFilterTest {
-    private static Stream<Arguments> matchingMessagePrefixes() {
+    private static Stream<Arguments> successfulPrefixesArguments() {
         return Stream.of(
                 Arguments.of("con", "content", "tent"),
                 Arguments.of("##", "##play", "play"),
@@ -33,7 +33,7 @@ class PrefixFilterTest {
     }
 
     @ParameterizedTest
-    @MethodSource("matchingMessagePrefixes")
+    @MethodSource("successfulPrefixesArguments")
     void givenApplicableMessageWhenFilterThenReturnSuccessful(String prefix, String message, String afterProcessing) {
         PrefixFilter prefixFilter = new PrefixFilter(prefix);
         ProcessingMessage processingMessage = new ProcessingMessage(MessageHelper.createMessage(message));
