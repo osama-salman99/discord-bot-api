@@ -8,11 +8,11 @@ import java.util.function.Function;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class ProcessingMessageFilterTest {
+class MessageFilterTest {
 
     @Test
     void givenNotApplicableFilterWhenFilterThenReturnNotSuccessfulResult() {
-        ProcessingMessageFilter filter = createFilter(false, null);
+        MessageFilter filter = createFilter(false, null);
 
         ProcessingMessage processingMessage = new ProcessingMessage(MessageHelper.createMessage("content"));
         FilterResult result = filter.filter(processingMessage);
@@ -23,7 +23,7 @@ class ProcessingMessageFilterTest {
 
     @Test
     void givenApplicableFilterWithEmptyProcessWhenFilterThenReturnSuccessfulResultWithSameProcessingMessage() {
-        ProcessingMessageFilter filter = createFilter(true, processingMessage -> processingMessage);
+        MessageFilter filter = createFilter(true, processingMessage -> processingMessage);
 
         ProcessingMessage processingMessage = new ProcessingMessage(MessageHelper.createMessage("content"));
         FilterResult result = filter.filter(processingMessage);
@@ -34,7 +34,7 @@ class ProcessingMessageFilterTest {
 
     @Test
     void givenApplicableFilterWithRepeatingProcessWhenFilterThenReturnSuccessfulResultWithProcessedMessage() {
-        ProcessingMessageFilter filter = createFilter(true, processingMessage -> new ProcessingMessage(processingMessage.getMessageObject(), processingMessage.getProcessedMessage().repeat(2)));
+        MessageFilter filter = createFilter(true, processingMessage -> new ProcessingMessage(processingMessage.getMessageObject(), processingMessage.getProcessedMessage().repeat(2)));
 
         ProcessingMessage processingMessage = new ProcessingMessage(MessageHelper.createMessage("content"));
         FilterResult result = filter.filter(processingMessage);
@@ -43,8 +43,8 @@ class ProcessingMessageFilterTest {
         assertEquals(processingMessage.getProcessedMessage().repeat(2), result.getProcessingMessage().getProcessedMessage());
     }
 
-    private ProcessingMessageFilter createFilter(boolean applicable, Function<ProcessingMessage, ProcessingMessage> processor) {
-        return new ProcessingMessageFilter() {
+    private MessageFilter createFilter(boolean applicable, Function<ProcessingMessage, ProcessingMessage> processor) {
+        return new MessageFilter() {
             @Override
             protected boolean isApplicable(ProcessingMessage processingMessage) {
                 return applicable;

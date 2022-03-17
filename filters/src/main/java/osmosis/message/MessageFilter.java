@@ -4,7 +4,7 @@ import osmosis.message.result.FailedFilterResult;
 import osmosis.message.result.FilterResult;
 import osmosis.message.result.SuccessfulFilterResult;
 
-public abstract class ProcessingMessageFilter {
+public abstract class MessageFilter {
 
     public FilterResult filter(ProcessingMessage processingMessage) {
         if (isApplicable(processingMessage)) {
