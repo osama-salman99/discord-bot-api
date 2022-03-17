@@ -1,8 +1,8 @@
 package osmosis.filters.message.chained;
 
 import org.junit.jupiter.api.Test;
-import osmosis.filters.message.MessageFilter;
 import osmosis.commons.message.ProcessingMessage;
+import osmosis.filters.message.MessageFilter;
 import osmosis.filters.message.helpers.MessageHelper;
 import osmosis.filters.message.result.FilterResult;
 

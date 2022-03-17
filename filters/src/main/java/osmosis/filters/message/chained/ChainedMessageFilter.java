@@ -2,9 +2,9 @@ package osmosis.filters.message.chained;
 
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
+import osmosis.commons.message.ProcessingMessage;
 import osmosis.filters.message.MessageFilter;
 import osmosis.filters.message.NonProcessingMessageFilter;
-import osmosis.commons.message.ProcessingMessage;
 import osmosis.filters.message.result.FailedFilterResult;
 import osmosis.filters.message.result.FilterResult;
 import osmosis.filters.message.result.SuccessfulFilterResult;
