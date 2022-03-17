@@ -1,8 +1,10 @@
 package osmosis.message;
 
 import org.junit.jupiter.api.Test;
+import osmosis.commons.message.ProcessingMessage;
+import osmosis.filters.message.MessageFilter;
 import osmosis.message.helpers.MessageHelper;
-import osmosis.message.result.FilterResult;
+import osmosis.filters.message.result.FilterResult;
 
 import java.util.function.Function;
 

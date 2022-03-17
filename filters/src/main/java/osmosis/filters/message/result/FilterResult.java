@@ -1,7 +1,7 @@
-package osmosis.message.result;
+package osmosis.filters.message.result;
 
 import lombok.AllArgsConstructor;
-import osmosis.message.ProcessingMessage;
+import osmosis.commons.message.ProcessingMessage;
 
 @AllArgsConstructor
 public abstract class FilterResult {

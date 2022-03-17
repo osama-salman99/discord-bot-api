@@ -1,6 +1,6 @@
-package osmosis.message.chained;
+package osmosis.filters.message.chained;
 
-import osmosis.message.MessageFilter;
+import osmosis.filters.message.MessageFilter;
 
 import java.util.ArrayList;
 import java.util.Collection;

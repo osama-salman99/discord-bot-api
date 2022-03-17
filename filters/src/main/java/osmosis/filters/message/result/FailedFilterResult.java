@@ -1,6 +1,6 @@
-package osmosis.message.result;
+package osmosis.filters.message.result;
 
-import osmosis.message.ProcessingMessage;
+import osmosis.commons.message.ProcessingMessage;
 
 public class FailedFilterResult extends FilterResult {
 

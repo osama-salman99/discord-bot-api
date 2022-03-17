@@ -1,8 +1,9 @@
-package osmosis.message;
+package osmosis.filters.message;
 
-import osmosis.message.result.FailedFilterResult;
-import osmosis.message.result.FilterResult;
-import osmosis.message.result.SuccessfulFilterResult;
+import osmosis.commons.message.ProcessingMessage;
+import osmosis.filters.message.result.FailedFilterResult;
+import osmosis.filters.message.result.FilterResult;
+import osmosis.filters.message.result.SuccessfulFilterResult;
 
 public abstract class MessageFilter {
 

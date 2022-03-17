@@ -1,4 +1,4 @@
-package osmosis.message;
+package osmosis.commons.message;
 
 import lombok.AllArgsConstructor;
 import org.javacord.api.entity.message.Message;

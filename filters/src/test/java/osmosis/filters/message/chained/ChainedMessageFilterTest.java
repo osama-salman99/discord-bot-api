@@ -1,10 +1,10 @@
-package osmosis.message.chained;
+package osmosis.filters.message.chained;
 
 import org.junit.jupiter.api.Test;
-import osmosis.message.MessageFilter;
-import osmosis.message.ProcessingMessage;
+import osmosis.filters.message.MessageFilter;
+import osmosis.commons.message.ProcessingMessage;
 import osmosis.message.helpers.MessageHelper;
-import osmosis.message.result.FilterResult;
+import osmosis.filters.message.result.FilterResult;
 
 import static org.junit.jupiter.api.Assertions.*;
 
