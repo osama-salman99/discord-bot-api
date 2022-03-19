@@ -11,7 +11,7 @@ import osmosis.filters.message.result.SuccessfulFilterResult;
 import java.util.Collection;
 
 @AllArgsConstructor(access = AccessLevel.PROTECTED)
-public class ChainedMessageFilter extends MessageFilter {
+public class ChainedMessageFilter implements MessageFilter {
     private final Collection<MessageFilter> filters;
 
     @Override
@@ -26,15 +26,5 @@ public class ChainedMessageFilter extends MessageFilter {
             }
         }
         return new SuccessfulFilterResult(tempProcessingMessage);
-    }
-
-    @Override
-    protected boolean isApplicable(ProcessingMessage processingMessage) {
-        throw new UnsupportedOperationException();
-    }
-
-    @Override
-    protected ProcessingMessage process(ProcessingMessage processingMessage) {
-        return processingMessage;
     }
 }

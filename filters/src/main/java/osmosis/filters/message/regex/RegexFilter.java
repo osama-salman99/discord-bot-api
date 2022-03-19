@@ -2,10 +2,10 @@ package osmosis.filters.message.regex;
 
 import lombok.AllArgsConstructor;
 import osmosis.commons.message.ProcessingMessage;
-import osmosis.filters.message.MessageFilter;
+import osmosis.filters.message.ProcessingMessageFilter;
 
 @AllArgsConstructor
-public abstract class RegexFilter extends MessageFilter {
+public abstract class RegexFilter extends ProcessingMessageFilter {
     private final String regex;
 
     @Override

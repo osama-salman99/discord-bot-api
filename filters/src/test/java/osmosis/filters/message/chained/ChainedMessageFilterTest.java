@@ -2,7 +2,7 @@ package osmosis.filters.message.chained;
 
 import org.junit.jupiter.api.Test;
 import osmosis.commons.message.ProcessingMessage;
-import osmosis.filters.message.MessageFilter;
+import osmosis.filters.message.ProcessingMessageFilter;
 import osmosis.filters.message.helpers.MessageHelper;
 import osmosis.filters.message.result.FilterResult;
 
@@ -59,8 +59,8 @@ class ChainedMessageFilterTest {
         assertEquals(processingMessage.getProcessedMessage().repeat(4), result.getProcessingMessage().getProcessedMessage());
     }
 
-    private MessageFilter createDuplicateMessageFilter() {
-        return new MessageFilter() {
+    private ProcessingMessageFilter createDuplicateMessageFilter() {
+        return new ProcessingMessageFilter() {
             @Override
             protected boolean isApplicable(ProcessingMessage processingMessage) {
                 return true;
@@ -73,8 +73,8 @@ class ChainedMessageFilterTest {
         };
     }
 
-    private MessageFilter createInapplicableFilter() {
-        return new MessageFilter() {
+    private ProcessingMessageFilter createInapplicableFilter() {
+        return new ProcessingMessageFilter() {
             @Override
             protected boolean isApplicable(ProcessingMessage processingMessage) {
                 return false;
