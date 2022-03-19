@@ -26,6 +26,11 @@ import java.util.concurrent.CompletableFuture;
 
 public class MessageHelper {
     public static Message createMessage(String content) {
+        return createMessage(content, false);
+    }
+
+    public static Message createMessage(String content, boolean fromBot) {
+        MessageAuthor messageAuthor = MessageAuthorHelper.createAuthor(fromBot);
         return new Message() {
             @Override
             public String getContent() {
@@ -89,7 +94,7 @@ public class MessageHelper {
 
             @Override
             public MessageAuthor getAuthor() {
-                return null;
+                return messageAuthor;
             }
 
             @Override
