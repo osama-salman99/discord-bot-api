@@ -4,7 +4,6 @@ import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import osmosis.commons.message.ProcessingMessage;
 import osmosis.filters.message.MessageFilter;
-import osmosis.filters.message.NonProcessingMessageFilter;
 import osmosis.filters.message.result.FailedFilterResult;
 import osmosis.filters.message.result.FilterResult;
 import osmosis.filters.message.result.SuccessfulFilterResult;
@@ -12,7 +11,7 @@ import osmosis.filters.message.result.SuccessfulFilterResult;
 import java.util.Collection;
 
 @AllArgsConstructor(access = AccessLevel.PROTECTED)
-public class ChainedMessageFilter extends NonProcessingMessageFilter {
+public class ChainedMessageFilter extends MessageFilter {
     private final Collection<MessageFilter> filters;
 
     @Override
@@ -32,5 +31,10 @@ public class ChainedMessageFilter extends NonProcessingMessageFilter {
     @Override
     protected boolean isApplicable(ProcessingMessage processingMessage) {
         throw new UnsupportedOperationException();
+    }
+
+    @Override
+    protected ProcessingMessage process(ProcessingMessage processingMessage) {
+        return processingMessage;
     }
 }
