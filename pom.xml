@@ -6,7 +6,7 @@
 
 	<groupId>osmosis</groupId>
 	<artifactId>discord-bot-api</artifactId>
-	<version>1.0</version>
+	<version>1.1</version>
 	<modules>
 		<module>filters</module>
 		<module>commons</module>
