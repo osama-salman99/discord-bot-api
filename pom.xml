@@ -11,6 +11,7 @@
 		<module>filters</module>
 		<module>commons</module>
 		<module>appliers</module>
+		<module>pipes</module>
 	</modules>
 
 	<packaging>pom</packaging>
